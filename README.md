@@ -1,11 +1,11 @@
 # Índice
 1. [Estructura de directorios](#estructura-de-directorios-carpetas)
 2. [Comandos del BOT](#comandos-del-bot)<br>
-> 2.1. [Varios](#varios)<br>
-> 2.2. [Interacción](#interacción)<br>
-> 2.3. [Operaciones matemáticas](#operaciones-matemáticas)<br>
-> 2.4. [Gráficas](#gráficas)<br>
-> 2.5. [Musica](#música)<br>
+&nbsp;2.1. [Varios](#varios)<br>
+&nbsp;2.2. [Interacción](#interacción)<br>
+&nbsp;2.3. [Operaciones matemáticas](#operaciones-matemáticas)<br>
+&nbsp;2.4. [Gráficas](#gráficas)<br>
+&nbsp;2.5. [Musica](#música)<br>
 3. [Información adicional](#información-adicional)
 
 
