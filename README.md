@@ -23,6 +23,9 @@
 > **bot.py** - Archivo principal. No tocar nada a menos que sepas lo que haces, en ese caso adelante, por algo es freeware.<br>
 > **config.py** - Archivo de configuración donde deberás introducir datos para que el bot funcione según lo deseado.<br>
 
+### modules
+> **anigifs.py** - Módulo que contiene funciones para aleatorización de urls de gifs.<br>
+
 ## Comandos del BOT
 ### Varios
 > **/help** - Muestra un menú de ayuda en un embed.<br>
