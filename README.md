@@ -1,5 +1,18 @@
 # Pype
 > BOT de Discord multipropósito escrito en Python.
+## Estructura de directorios (carpetas)
+### data
+> Archivos usados para el cambio de estado del bot. Modificables a gusto del consumidor.<br>
+
+### images
+> **animageslib** - Todos los gifs de las interacciones de anime.<br>
+> **assets** - Assets tipo logos y cosas así. Su nombre tiene que coincidir con el de ```config.py```.<br>
+> **hentaimages** - Lo mismo que ```animageslib``` pero con imágenes hentai...<br>
+
+### src
+> Como su propio nombre indica incluye el source code.
+> **bot.py** - Archivo principal. No tocar nada a menos que sepas lo que haces, en ese caso adelante, por algo es freeware.<br>
+> **config.py** - Archivo de configuración donde deberás introducir datos para que el bot funcione según lo deseado.<br>
 
 ## Comandos de Pype
 ### Varios
