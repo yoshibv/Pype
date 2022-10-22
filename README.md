@@ -10,7 +10,7 @@
 > **hentaimages** - Lo mismo que ```animageslib``` pero con imágenes hentai...<br>
 
 ### src
-> Como su propio nombre indica incluye el source code.
+> Como su propio nombre indica incluye el source code.<br>
 > **bot.py** - Archivo principal. No tocar nada a menos que sepas lo que haces, en ese caso adelante, por algo es freeware.<br>
 > **config.py** - Archivo de configuración donde deberás introducir datos para que el bot funcione según lo deseado.<br>
 
