@@ -117,9 +117,9 @@ async def spam(ctx, *, miembro: discord.Member, mensaje, veces: int):
         await user.send(f"Fuiste spameado por {ctx.author} 🙂\n================================")
         for r in range(veces):
             await user.send(mensaje)
-        await user.send("||`{DISCORD_INVITE}`||")
+        await user.send("||`"+DISCORD_INVITE+"`||")
     else:
-        await ctx.respond("No puedes spammear a {OWNER_NAME} 😡", ephemeral = True)
+        await ctx.respond("No puedes spammear a" + OWNER_NAME + "😡", ephemeral = True)
 
 
  ###  #     #  #######  #######  ######      #      #####    #####   ###  #######  #     # 
@@ -362,4 +362,4 @@ async def on_ready():
         await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name=str(random.choice(grupos))))
         await asyncio.sleep(60)
 
-bot.run('{BOT_TOKEN}')
+bot.run(BOT_TOKEN)
