@@ -9,8 +9,6 @@
 > **/say** - Manda un mensaje a través del bot.<br>
 > **/platano** - Mira a ver cuánto mide tu plátano. 😳<br>
 > **/dado** - Tira un dado de 6 caras.<br>
-> **/oniichan** - Ya cabrease a la loli.<br>
-> **/nlp** - Copypaste directo de los rincones más oscuros de Reddit.<br>
 > **/moneda** - Tira una moneda al aire.<br>
 > **/avatar** - Renderiza el avatar de un miembro del servidor.<br>
 > **/spam** - Spammea a un miembro del servidor. 😈<br>
@@ -56,3 +54,4 @@ async def command(ctx, *, optional_params):
     code
     return
 ```
+⚠️ **IMPORTANTE: PARA AÑADIR IMÁGENES A SUS RESPECTIVOS DIRECTORIOS SERÁ NECESARIO RENOMBRAR LOS FICHEROS ÚNICAMENTE DE LA FORMA INDICADA EN DICHOS DIRECTORIOS O NO FUNCIONARÁ** ⚠️
