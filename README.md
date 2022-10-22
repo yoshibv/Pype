@@ -1,5 +1,14 @@
-# Pype
-> BOT de Discord multipropósito escrito en Python.
+# Índice
+1. [Estructura de directorios](#estructura-de-directorios-carpetas)
+2. [Comandos del BOT](#comandos-del-bot)
+2.1. [Varios](#varios)
+2.2. [Interacción](#interacción)
+2.3. [Operaciones matemáticas](#operaciones-matemáticas)
+2.4. [Gráficas](#gráficas)
+2.5. [Musica](#música)
+3. [Información adicional](#información-adicional)
+
+
 ## Estructura de directorios (carpetas)
 ### data
 > Archivos usados para el cambio de estado del bot. Modificables a gusto del consumidor.<br>
@@ -14,7 +23,7 @@
 > **bot.py** - Archivo principal. No tocar nada a menos que sepas lo que haces, en ese caso adelante, por algo es freeware.<br>
 > **config.py** - Archivo de configuración donde deberás introducir datos para que el bot funcione según lo deseado.<br>
 
-## Comandos de Pype
+## Comandos del BOT
 ### Varios
 > **/help** - Muestra un menú de ayuda en un embed.<br>
 > **/info** - Muestra la info del servidor.<br>
