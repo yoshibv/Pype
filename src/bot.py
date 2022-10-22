@@ -1,17 +1,18 @@
+import asyncio
 import datetime
 import random
 import re
 import time
-import asyncio
+import matplotlib.pyplot as plt
+import numpy as np
 from random import randint
-from unicodedata import name
 from urllib import parse, request
 
 import discord
-import matplotlib.pyplot as plt
-import numpy as np
-from modules.anigifs import *
 from discord.ext import commands, tasks
+
+from modules.anigifs import *
+from config import *
 
 bot = commands.Bot(intents=discord.Intents.all(), help_command=None)
 
@@ -32,18 +33,18 @@ async def info(ctx):
     embed1 = discord.Embed(title=f"{ctx.guild.name}", description="Información del servidor", timestamp=datetime.datetime.now(), color=discord.Color.gold() )
     embed1.add_field(name="Miembros: ", value=f"{ctx.guild.member_count}")
     embed1.add_field(name="Creador: ",  value=f"{ctx.guild.owner}")
-    mclogo = discord.File(imgpath("LOGO_DEL_SERVIDOR_DE_DISCORD"), filename="image.png")
+    dislogo = discord.File(imgpath(DISCORD_LOGO), filename="image.png")
     embed1.set_footer(icon_url="attachment://image.png", text=f"pedido por {ctx.author.name}")
     embed1.set_thumbnail(url="attachment://image.png")
 
-    embed2 = discord.Embed(title="NOMBRE_DEL_BOT", color=discord.Color.gold())
+    embed2 = discord.Embed(title=BOT_NAME, color=discord.Color.gold())
     embed2.add_field(name="Lenguaje", value=f"Python", inline=False)
     embed2.add_field(name="Tipo", value=f"Multipropósito", inline=False)
-    pypeav = discord.File(imgpath("LOGO_DEL_BOT_A_TU_ELECCIÓN"), filename="image.png")
+    botlogo = discord.File(imgpath(BOT_LOGO), filename="image.png")
     embed2.set_image(url="attachment://image.png")
 
-    await ctx.respond(file=mclogo, embed=embed1)
-    await ctx.respond(file=pypeav, embed=embed2)
+    await ctx.respond(file=dislogo, embed=embed1)
+    await ctx.respond(file=botlogo, embed=embed2)
 
 @bot.slash_command(name='yt', description="Busca algo en YouTube.")
 async def yt(ctx, *, búsqueda):
@@ -72,7 +73,7 @@ async def help(ctx):
 async def platano(ctx):
     a = 2
     b = 21
-    if ctx.author.id == 0000000000000000000: #id del owner para que la medida siempre salga 21
+    if ctx.author.id == OWNER_ID: #id del owner para que la medida siempre salga 21
         banana = 21
     else:
         banana = randint(a,b)
@@ -107,7 +108,7 @@ async def avatar(ctx, *, miembro: discord.Member):
 
 @bot.slash_command(name='spam', description="A molestar ùwú.")
 async def spam(ctx, *, miembro: discord.Member, mensaje, veces: int):
-    if miembro.id != 0000000000000000000: # id del owner para que no le puedan spammear
+    if miembro.id != OWNER_ID: # id del owner para que no le puedan spammear
         idl = list(miembro.mention)
         usrid = idl[2:-1]
         spamtoid = int(''.join(str(i) for i in usrid))
@@ -116,9 +117,9 @@ async def spam(ctx, *, miembro: discord.Member, mensaje, veces: int):
         await user.send(f"Fuiste spameado por {ctx.author} 🙂\n================================")
         for r in range(veces):
             await user.send(mensaje)
-        await user.send("||`https://discord.gg/HHtQ8wU2TK`||")
+        await user.send("||`{DISCORD_INVITE}`||")
     else:
-        await ctx.respond("No puedes spammear a <owner> 😡", ephemeral = True)
+        await ctx.respond("No puedes spammear a {OWNER_NAME} 😡", ephemeral = True)
 
 
  ###  #     #  #######  #######  ######      #      #####    #####   ###  #######  #     # 
@@ -327,7 +328,7 @@ async def par(ctx, a: int, b: int, c: int):
 
 @bot.event
 async def on_ready():         
-    channel = bot.get_channel(0000000000000000000) # canal de admins para anunciar cuando se inicia el bot
+    channel = bot.get_channel(ADMIN_CHANNEL_ID) # canal de admins para anunciar cuando se inicia el bot
     embed = discord.Embed(title = "Pype Console", description = "```✅ | Server has started\n✅ | Bot has run succesfully\n🤖 | Estoy listo pa\n🤖 | _```", color = discord.Color.gold())
     await channel.send(embed=embed)
 
@@ -361,4 +362,4 @@ async def on_ready():
         await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name=str(random.choice(grupos))))
         await asyncio.sleep(60)
 
-bot.run('INTRODUCIR TU TOKEN DEL BOT')
+bot.run('{BOT_TOKEN}')
