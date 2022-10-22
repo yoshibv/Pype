@@ -119,7 +119,7 @@ async def spam(ctx, *, miembro: discord.Member, mensaje, veces: int):
             await user.send(mensaje)
         await user.send("||`"+DISCORD_INVITE+"`||")
     else:
-        await ctx.respond("No puedes spammear a" + OWNER_NAME + "😡", ephemeral = True)
+        await ctx.respond("No puedes spammear a " + OWNER_NAME + " 😡", ephemeral = True)
 
 
  ###  #     #  #######  #######  ######      #      #####    #####   ###  #######  #     # 
