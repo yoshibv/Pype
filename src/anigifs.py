@@ -1,4 +1,5 @@
 from random import randint
+import discord
 
 def rDANCE():
     # creación de lista vacía 
@@ -167,3 +168,22 @@ def imgpath(archivo):
 
 def ailibind(archivo):
     return "./images/animageslib/" + archivo
+
+def color_parser(color):
+    if color == "AMARILLO":
+        res = discord.Color.gold()
+    elif color == "ROJO":
+        res = discord.Color.red()
+    elif color == "AZUL":
+        res = discord.Color.blue()
+    elif color == "DISCORD":
+        res = discord.Color.blurple()
+    elif color == "NARANJA":
+        res = discord.Color.orange()
+    elif color == "ROSA":
+        res = discord.Color.nitro_pink()
+    elif color == "MORADO":
+        res = discord.Color.purple()
+    else:
+        res = discord.Color.og_blurple()
+    return res
