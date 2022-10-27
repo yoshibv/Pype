@@ -26,7 +26,7 @@ bot = commands.Bot(intents=discord.Intents.all(), help_command=None)
 
 @bot.slash_command(name="ping", description="Muestra la latencia del bot.")
 async def ping(ctx):
-    await ctx.respond(f'Pong! Latency is {bot.latency}')
+    await ctx.respond(f'Pong! Latency is {bot.latency}', ephemeral = True)
 
 @bot.slash_command(name="info", description="Muestra información sobre el servidor.")
 async def info(ctx):
@@ -120,6 +120,15 @@ async def spam(ctx, *, miembro: discord.Member, mensaje, veces: int):
         await user.send("||`"+DISCORD_INVITE+"`||")
     else:
         await ctx.respond("No puedes spammear a " + OWNER_NAME + " 😡", ephemeral = True)
+
+@bot.slash_command(name="anuncio", description="Anuncia algo.")
+async def anuncio(ctx):
+    if ctx.author.id == OWNER_ID or ctx.author.id == ADMIN_ROLE_ID:
+        channel = bot.get_channel(ANNOUNCES_CHANNEL_ID)
+        await channel.send(ctx)
+    else:
+        await ctx.respond(f"No tienes permisos para eso, {ctx.author.mention} ", ephemeral = True)
+
 
 
  ###  #     #  #######  #######  ######      #      #####    #####   ###  #######  #     # 
